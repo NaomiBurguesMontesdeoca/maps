@@ -1,0 +1,32 @@
+<h2>Actualizar {{name}}</h2>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form action="/places/update/{{_id}}" method="POST">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="name" name="name" value="{{name}}">
+                </div>
+                <label>Latitud
+                    <input name="latitude" type="text">
+                </label>
+                <br><br>
+
+                <label>Longitud
+                    <input name="longitude" type="text">
+                </label>
+                <br><br>
+                <div class="mb-3">
+                    <label for="type" class="form-label">Tipo</label>
+                    <select class="form-select" name="type" value="{{type}}">
+                        <option value="coffee shop">Coffee Shop</option>
+                        <option value="bookstore">Bookstore</option>
+                    </select>
+                </div>
+                <div class="d-grid">
+                    <input type="submit" class="btn btn-dark" value="editar">
+                </div>
+        </div>
+        </form>
+    </div>
+</div>
